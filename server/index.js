@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
-import morgan from "morgan";
+import morgan from "morgan"; // shows endpoints in terminal
 import { OpenAI } from "openai";
 import openAIRoutes from "./routes/openai.js";
 
