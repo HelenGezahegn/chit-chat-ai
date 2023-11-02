@@ -76,6 +76,35 @@ body,
   margin: 10px 0;
   background-color: $primary-600;
   color: $tertiary-50;
+  font-family: "Rubik" !important;
+}
+
+.login-button {
+  background-color: $tertiary-50;
+  border-radius: 8px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik" !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.login-button:hover {
+  background-color: #f3f4f6;
+  transition-duration: 0.1s;
 }
 
 .register-change {
