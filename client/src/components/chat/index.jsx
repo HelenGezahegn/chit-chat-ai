@@ -10,7 +10,7 @@ import AI from "@/components/customMessageForms/AI";
 const Chat = () => {
   const chatProps = useMultiChatLogic(
     import.meta.env.VITE_PROJECT_ID,
-    "testuser",
+    "Helen",
     "1234"
   );
 
@@ -22,7 +22,7 @@ const Chat = () => {
         style={{ height: "100vh" }}
         renderChatHeader={(chat) => <Header chat={chat} />}
         renderMessageForm={(props) => {
-          if (chatProps.chat?.title.endsWith("Bot")) {
+          if (chatProps.chat?.title === "SupportBot") {
             return <AI props={props} activeChat={chatProps.chat} />;
           }
           return (
