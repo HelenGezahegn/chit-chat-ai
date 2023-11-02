@@ -15,6 +15,7 @@ const AI = ({ props, activeChat }) => {
       .replace("T", " ")
       .replace("Z", `${Math.floor(Math.random() * 1000)}+00:00`);
     const att = attachment ? [{ blob: attachment, file: attachment.name }] : [];
+
     const form = {
       attachments: att,
       created: date,
@@ -29,10 +30,9 @@ const AI = ({ props, activeChat }) => {
     await trigger(form); // trigger open ai api call
   };
 
-  
   return (
     <MessageFormUI
-      setAttachment={attachment}
+      setAttachment={setAttachment}
       message={message}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
