@@ -22,6 +22,9 @@ export default defineConfig({
           }
         }
       }
+    },
+    commonjsOptions: {
+      transformMixedEsModules: true // THIS STATEMENT SAVED MY LIFE. BEFORE, NODE_MODULES NEXTJS-WEBSOCKET WOULDN'T WORK BC REQUIRE WAS UNDEFINED. THIS FIXES THE COMMONJS FILE!
     }
   }
 });
