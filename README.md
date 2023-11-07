@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/HelenGezahegn/chit-chat-ai">
-    <img src="client/public/chitChatLogo.png" alt="Logo" width="120" height="120">
+    <img src="client/public/logo.png" alt="Logo" width="120" height="120">
   </a>
 
 <h3 align="center">ChitChat</h3>
@@ -83,10 +83,9 @@
 </div>
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-ChitChat, a chat app that leverages the power of OpenAI's GPT-based technology to provide a unique messaging experience. 
-With dynamic messaging, attachments, and innovative AI-enhancements, ChitChat offers a versatile platform for personal and professional interactions. 
+ChitChat, a chat app that leverages the power of OpenAI's GPT-based technology to provide a unique messaging experience.
+With dynamic messaging, attachments, and innovative AI-enhancements, ChitChat offers a versatile platform for personal and professional interactions.
 Join us in redefining conversations and download ChitChat today for a more engaging and memorable messaging experience.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,36 +110,42 @@ Built from scratch, this project contains a backend and a frontend denoted by th
 
 ### Backend
 
-1. [Create an account with OpenAI and obtain a key](https://openai.com/). After sign up, it'll show you your API key. Make sure to copy it to your `.env` as they will only show you this key once.
+1. [Create an account with OpenAI and obtain a key](https://openai.com/). After sign up, it'll show you your API key, `OPENAI_API_KEY`. Make sure to copy it to your `.env` as they will only show you this key once.
 
-2. [Sign up for a Auth0 account](https://auth0.com/) and follow the quickstart tutorial to obtain the environment variables.
+   - The free trial provides you with $5 credit in using their services (which is more than enough). Please know that this credit expires in 3 months.
 
-2. Clone the repo
+2. [Sign up for a Chat Engine accout](https://chatengine.io/) to obtain the `PROJECT_ID` and `PRIVATE_KEY`.
+
+3. Clone the repo
+
    ```sh
    git clone https://github.com/HelenGezahegn/chit-chat-ai.git
    ```
-3. Install NPM packages
+
+4. Install NPM packages
+
    ```sh
+   cd server
    npm install
    ```
-4. Create a `.env` file in the `server` directory. Add your port, MongoDB API, and JWT keys.
+
+5. Create a `.env` file in the `server` directory. Add the port, OpenAI, and Chat Engine keys.
+
    ```js
    PORT = 1337;
    OPENAI_API_KEY=...
 
-   # Chat Engine 
-   PROJECT_ID=... 
+   # Chat Engine
+   PROJECT_ID=...
    PRIVATE_KEY=...
+
+   # SupportBot
    BOT_USER_NAME=...
    BOT_USER_SECRET=...
-
-   # Auth0
-   AUTH0_SECRET=...
-   AUTH0_CLIENT_ID=...
-   AUTH0_DOMAIN=...
-   ...
    ```
-5. Run it!
+
+6. Run it!
+
    ```js
    npm run start
    ```
@@ -149,13 +154,29 @@ Built from scratch, this project contains a backend and a frontend denoted by th
 
 In another terminal:
 
-1. Install NPM packages
+1. [Sign up for an Auth0 account](https://auth0.com/docs/quickstart/spa/react/01-login) to obtain the `VITE_AUTH0_CLIENT_ID` and `VITE_AUTH0_DOMAIN` and use their universal login screen.
+
+2. Install NPM packages
 
    ```sh
+   cd client
    npm install
    ```
 
-2. Run it! Open [http://localhost:5173](http://localhost:5173) to view it in your browser. This page will reload when you make changes and display lint errors in the console.
+3. Create a `.env.local` file in the `client` directory. Add `VITE_` in front of all keys in order to be read by vite.
+
+   ```js
+     VITE_BASE_URL=...
+
+     # Chat Engine
+     VITE_PROJECT_ID=...
+
+     # Auth0
+     VITE_AUTH0_CLIENT_ID=...
+     VITE_AUTH0_DOMAIN=...
+   ```
+
+4. Run it! Open [http://localhost:5173](http://localhost:5173) to view it in your browser. This page will reload when you make changes and display lint errors in the console.
 
    ```sh
    npm run dev
@@ -175,11 +196,10 @@ Demo video coming soon.
 
 ## Roadmap
 
-- [ ] Add Auth0
+- [x] Add Auth0
   - [ ] Add logout
 - [ ] Automate SupportBot chat creation after signup
 - [ ] Update styling
-- [ ] Add Ionic to make it a native app
 
 See the [open issues](https://github.com/HelenGezahegn/chit-chat-ai/issues) for a full list of proposed features (and known issues).
 
@@ -218,9 +238,10 @@ Helen Gezahegn
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-gezahegn@ualberta.ca
+<gezahegn@ualberta.ca>
 
-Project Link: 
+Project Link:
+
 - Front-End: [https://chit-chat-ai-1.vercel.app](https://chit-chat-ai-1.vercel.app)
 - Back-End: [https://chit-chat-ai-server.vercel.app](https://chit-chat-ai-server.vercel.app)
 
@@ -241,9 +262,6 @@ Project Link:
 [license-url]: https://github.com/HelenGezahegn/chit-chat-ai/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/HelenGezahegn
-[product-screenshot]: images/screenshot.png
-[Mongo-dev]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
-[Mongo-url]: https://mongodb.com
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Express-dev]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
@@ -253,6 +271,7 @@ Project Link:
 [React-Router-dev]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white
 [React-Router-url]: https://reactrouter.com/
 [Sass-dev]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+
 [Sass-url]: [https://mui.com/material-ui/](https://sass-lang.com/)
 [Node-dev]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 

@@ -54,7 +54,7 @@ body,
   width: 8rem;
   height: 8rem;
   border-radius: "50%";
-  background-image: url("/chitChatLogo.png");
+  background-image: url("/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -73,6 +73,7 @@ body,
 }
 
 .welcome-title {
+  text-align: center;
   font-size: 3rem;
   margin: 2rem;
 }
@@ -97,6 +98,11 @@ body,
   position: absolute;
   top: 1.2rem;
   right: 1.5rem;
+}
+
+.welcome-github-icon:hover {
+  opacity: 0.5;
+  transition-duration: 0.3s;
 }
 
 .welcome-button {
@@ -124,14 +130,13 @@ body,
 }
 
 .welcome-button-icon {
-  color: #35596c !important;
   padding-left: 0.5rem;
   width: 1.5rem !important;
 }
 
 .welcome-button:hover {
   background-color: #f3f4f6;
-  transition-duration: 0.1s;
+  transition-duration: 0.5s;
 }
 
 /* Chat Styling */
