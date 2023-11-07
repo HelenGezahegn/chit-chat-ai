@@ -15,11 +15,7 @@ const Welcome = () => {
 
       <div className="welcome-page">
         <div className="welcome-top-nav">
-          <img
-            className="welcome-logo"
-            src="public/chitChatLogo.png"
-            alt="logo"
-          />
+          <img className="welcome-logo" src="/chitChatLogo.png" alt="logo" />
           <a href="https://github.com/HelenGezahegn/chit-chat-ai">
             <img
               className="welcome-github-icon"

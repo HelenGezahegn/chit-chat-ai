@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { usePostLoginMutation, usePostSignUpMutation } from "@/state/api";
-import Chat from "@/components/chat";
 import { useAuth0 } from "@auth0/auth0-react";
+import Background from "../welcome/Background";
 
 const LoadChat = () => {
   const [chatDBSynced, setChatDBSynced] = useState(false);
@@ -60,16 +61,31 @@ const LoadChat = () => {
   }, [getAccessTokenSilently, user?.sub, userMetadata?.logins_count]);
 
   const renderLoadingScreen = () => {
-    return <div>Loading...</div>;
+    return (
+      <div className="loader-container">
+        <Background />
+        <motion.div
+          className="loader"
+          animate={{ rotate: 360 }}
+          transition={{
+            ease: "linear",
+            duration: 2,
+            repeat: Infinity,
+            delay: 1
+          }}
+        />
+      </div>
+    );
   };
 
   return (
     <>
-      {userMetadata && chatDBSynced && !isLoading ? (
+      {renderLoadingScreen()}
+      {/* {userMetadata && chatDBSynced && !isLoading ? (
         <Chat user={userMetadata} />
       ) : (
         renderLoadingScreen()
-      )}
+      )} */}
     </>
   );
 };

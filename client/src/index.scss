@@ -47,7 +47,20 @@ body,
   height: 15px !important;
 }
 
-.welcome-page {
+.loader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8rem;
+  height: 8rem;
+  border-radius: "50%";
+  background-image: url("/chitChatLogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.welcome-page,
+.loader-container {
   height: 100%;
   width: auto;
   display: flex;
