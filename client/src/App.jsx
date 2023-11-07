@@ -4,7 +4,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Welcome from "./components/welcome";
 
 function App() {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) return <LoadChat />;
 
   return (
     <div className="app">
