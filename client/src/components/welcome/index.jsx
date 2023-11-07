@@ -16,7 +16,10 @@ const Welcome = () => {
       <div className="welcome-page">
         <div className="welcome-top-nav">
           <img className="welcome-logo" src="/chitChatLogo.png" alt="logo" />
-          <a href="https://github.com/HelenGezahegn/chit-chat-ai">
+          <a
+            href="https://github.com/HelenGezahegn/chit-chat-ai"
+            target="_blank" rel="noreferrer"
+          >
             <img
               className="welcome-github-icon"
               src="https://static-00.iconduck.com/assets.00/github-icon-2048x1988-jzvzcf2t.png"
