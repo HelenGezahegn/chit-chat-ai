@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoadChat from "@/components/chat/LoadChat";
 import { useAuth0 } from "@auth0/auth0-react";
-import Welcome from "./components/login";
+import Welcome from "./components/welcome";
 
 function App() {
   const { isAuthenticated } = useAuth0();

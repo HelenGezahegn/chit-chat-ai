@@ -47,48 +47,54 @@ body,
   height: 15px !important;
 }
 
-.login-page {
-  background-color: $primary-500;
+.welcome-page {
   height: 100%;
-  width: 100%;
+  width: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.login-container {
+  z-index: 999;
+  position: relative;
   color: $tertiary-50;
 }
 
-.login-actions {
+.welcome-title {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.welcome-top-nav {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
 }
 
-.login-input {
-  box-sizing: border-box;
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  padding: 0 10px;
-  margin: 10px 0;
-  background-color: $primary-600;
-  color: $tertiary-50;
-  font-family: "Rubik" !important;
+.welcome-logo {
+  width: 3rem;
+  height: auto;
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
 }
 
-.login-button {
+.welcome-github-icon {
+  width: 2.3rem;
+  height: auto;
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+}
+
+.welcome-button {
   background-color: $tertiary-50;
   border-radius: 8px;
   border-width: 0;
   color: #333333;
   cursor: pointer;
-  display: inline-block;
   font-family: "Rubik" !important;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 500;
   line-height: 20px;
   list-style: none;
   margin-top: 10px;
@@ -100,22 +106,19 @@ body,
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  display: flex;
+  align-items: center;
 }
 
-.login-button:hover {
+.welcome-button-icon {
+  color: #35596c !important;
+  padding-left: 0.5rem;
+  width: 1.5rem !important;
+}
+
+.welcome-button:hover {
   background-color: #f3f4f6;
   transition-duration: 0.1s;
-}
-
-.register-change {
-  text-decoration: underline;
-  color: $secondary-500;
-}
-
-.register-change:hover {
-  text-decoration: underline;
-  color: $tertiary-100;
-  cursor: pointer;
 }
 
 /* Chat Styling */
@@ -244,7 +247,8 @@ body,
 }
 
 .message-form-icon-clip:hover,
-.message-form-icon-airplane:hover {
+.message-form-icon-airplane:hover,
+.welcome-github-icon:hover {
   color: $secondary-800 !important;
   cursor: pointer;
 }
