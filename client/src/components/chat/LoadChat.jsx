@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePostLoginMutation, usePostSignUpMutation } from "@/state/api";
+import Chat from "@/components/chat";
 import { useAuth0 } from "@auth0/auth0-react";
 import Background from "../welcome/Background";
 
@@ -70,8 +71,7 @@ const LoadChat = () => {
           transition={{
             ease: "linear",
             duration: 2,
-            repeat: Infinity,
-            delay: 1
+            repeat: Infinity
           }}
         />
       </div>
@@ -80,12 +80,11 @@ const LoadChat = () => {
 
   return (
     <>
-      {renderLoadingScreen()}
-      {/* {userMetadata && chatDBSynced && !isLoading ? (
+      {userMetadata && chatDBSynced && !isLoading ? (
         <Chat user={userMetadata} />
       ) : (
         renderLoadingScreen()
-      )} */}
+      )}
     </>
   );
 };
