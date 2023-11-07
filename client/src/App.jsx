@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "@/components/login";
-import Chat from "@/components/chat";
+import LoadChat from "@/components/chat/LoadChat";
+import { useAuth0 } from "@auth0/auth0-react";
+import Welcome from "./components/login";
 
 function App() {
-  const [user, setUser] = useState(null);
-  const [secret, setSecret] = useState(null);
-  const isAuth = user && secret;
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div className="app">
@@ -14,23 +12,11 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={
-              isAuth ? (
-                <Navigate to="/chat" />
-              ) : (
-                <Login setUser={setUser} setSecret={setSecret} />
-              )
-            }
+            element={isAuthenticated ? <Navigate to="/chat" /> : <Welcome />}
           />
           <Route
             path="/chat"
-            element={
-              isAuth ? (
-                <Chat user={user} secret={secret} />
-              ) : (
-                <Navigate to="/" />
-              )
-            }
+            element={isAuthenticated ? <LoadChat /> : <Navigate to="/" />}
           />
         </Routes>
       </BrowserRouter>
