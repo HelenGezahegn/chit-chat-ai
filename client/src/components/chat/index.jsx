@@ -3,13 +3,13 @@ import {
   MultiChatSocket,
   MultiChatWindow
 } from "react-chat-engine-advanced";
-import Header from "@/components/customHeader";
+import NavBar from "@/components/navBar";
 import StandardMessageForm from "@/components/customMessageForms/StandardMessageForm";
 
 import AI from "@/components/customMessageForms/AI";
 
 const Chat = ({ user }) => {
-  const { nickname, user_id } = user;
+  const { nickname, user_id, picture } = user;
 
   const chatProps = useMultiChatLogic(
     import.meta.env.VITE_PROJECT_ID,
@@ -21,11 +21,11 @@ const Chat = ({ user }) => {
     <>
       {user && (
         <div style={{ flexBasis: "100%" }}>
+          <NavBar username={nickname} avatar={picture} />
           <MultiChatSocket {...chatProps} />
           <MultiChatWindow
             {...chatProps}
-            style={{ height: "100vh" }}
-            renderChatHeader={(chat) => <Header chat={chat} />}
+            style={{ height: "calc(99vh - 81px)" }}
             renderMessageForm={(props) => {
               if (chatProps.chat?.title === "SupportBot") {
                 return <AI props={props} activeChat={chatProps.chat} />;
