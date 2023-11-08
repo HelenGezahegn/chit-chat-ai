@@ -1,12 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadChat from "@/components/chat/LoadChat";
 import { useAuth0 } from "@auth0/auth0-react";
 import Welcome from "./components/welcome";
 
 function App() {
-  const { isAuthenticated, isLoading } = useAuth0();
-
-  if (isLoading) return <LoadChat />;
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div className="app">
@@ -14,11 +12,11 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={isAuthenticated ? <Navigate to="/chat" /> : <Welcome />}
+            element={isAuthenticated ? <LoadChat /> : <Welcome />}
           />
           <Route
             path="/chat"
-            element={isAuthenticated ? <LoadChat /> : <Navigate to="/" />}
+            element={isAuthenticated ? <LoadChat /> : <Welcome />}
           />
         </Routes>
       </BrowserRouter>

@@ -196,11 +196,13 @@ Demo video coming soon.
 
 ## Roadmap
 
-- [ ] Update styling
+- [x] Update styling
 - [x] Add Auth0
-  - [ ] Add logout
-- [ ] Add calling
-- [ ] Automate SupportBot chat creation after signup
+  - [x] Add logout
+- [x] Automate SupportBot chat creation after signup
+- [ ] Fix double refresh 
+- [ ] Call Auth0 to add favicon to login/signup screens
+- [ ] Make it responsive/mobile-friendly
 
 See the [open issues](https://github.com/HelenGezahegn/chit-chat-ai/issues) for a full list of proposed features (and known issues).
 
