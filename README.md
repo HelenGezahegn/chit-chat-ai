@@ -77,9 +77,8 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
 <div align="center">
-<img src="https://github.com/HelenGezahegn/chit-chat-ai/assets/23146829/e3cd4693-dd0d-4ca9-85d3-1789b99de3a2" alt="product" style="width:800px">
+<img src="https://s5.gifyu.com/images/S813r.gif" alt="product" style="width:800px">
 </div>
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
