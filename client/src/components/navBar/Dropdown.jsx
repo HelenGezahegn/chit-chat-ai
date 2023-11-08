@@ -1,6 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { Menu, MenuItem } from "./Menu.jsx";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const menu = {
   closed: {
@@ -45,7 +46,11 @@ const Avatar = ({ username, avatar }) => {
 
 export default function Dropdown({ username, avatar }) {
   const [open, setOpen] = useState(false);
-  const handleLogout = () => {};
+  const { logout } = useAuth0();
+
+  const handleLogout = () => {
+    logout({ logoutParams: { returnTo: window.location.origin } });
+  };
 
   const hrefs = {
     viewDocs: () =>
