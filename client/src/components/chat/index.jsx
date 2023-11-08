@@ -11,7 +11,7 @@ import StandardMessageForm from "@/components/customMessageForms/StandardMessage
 import AI from "@/components/customMessageForms/AI";
 
 const Chat = ({ user }) => {
-  const { nickname, user_id, picture } = user;
+  const { username, nickname, user_id, picture } = user; //TODO: check if username===nickname
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Chat = ({ user }) => {
     <>
       {user && (
         <div style={{ flexBasis: "100%" }}>
-          <NavBar username={nickname} avatar={picture} />
+          <NavBar username={username} avatar={picture} />
           <MultiChatSocket {...chatProps} />
           <MultiChatWindow
             {...chatProps}
