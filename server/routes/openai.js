@@ -9,7 +9,6 @@ const router = express.Router();
 router.post("/v1/completions", async (req, res) => {
   try {
     const { text, activeChatId } = req.body;
-    debugger;
 
     const response = await openai.chat.completions.create({
       model: "gpt-3.5-turbo-0613",
