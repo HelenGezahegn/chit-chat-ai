@@ -196,10 +196,11 @@ Demo video coming soon.
 
 ## Roadmap
 
+- [ ] Update styling
 - [x] Add Auth0
   - [ ] Add logout
+- [ ] Add calling
 - [ ] Automate SupportBot chat creation after signup
-- [ ] Update styling
 
 See the [open issues](https://github.com/HelenGezahegn/chit-chat-ai/issues) for a full list of proposed features (and known issues).
 
