@@ -78,10 +78,10 @@
 
 ## About The Project
 <div align="center">
-<img src="https://s5.gifyu.com/images/S813r.gif" alt="product" style="width:800px">
+<img src="https://github.com/HelenGezahegn/chit-chat-ai/assets/23146829/053dc534-0916-4a64-8009-aa17f2979d94" alt="product" style="width:800px">
 </div>
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
+<br />
 ChitChat, a chat app that leverages the power of OpenAI's GPT-based technology to provide a unique messaging experience.
 With dynamic messaging, attachments, and innovative AI-enhancements, ChitChat offers a versatile platform for personal and professional interactions.
 Join us in redefining conversations and download ChitChat today for a more engaging and memorable messaging experience.
