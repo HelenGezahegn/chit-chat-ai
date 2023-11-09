@@ -78,7 +78,7 @@
 
 ## About The Project
 <div align="center">
-<img src="https://github.com/HelenGezahegn/chit-chat-ai/assets/23146829/053dc534-0916-4a64-8009-aa17f2979d94" alt="product" style="width:800px">
+<img src="https://github.com/HelenGezahegn/chit-chat-ai/blob/main/client/public/chit-chat-ai-demo.gif" alt="product" style="width:800px">
 </div>
 
 <br />
